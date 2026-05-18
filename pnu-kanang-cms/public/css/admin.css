@@ -1,0 +1,125 @@
+/* ============================================================
+   PNU Kanang CMS - Admin Panel Stylesheet
+   ============================================================ */
+
+:root {
+    --nu-green-dark: #0a5c36;
+    --nu-green: #137C45;
+    --nu-green-light: #4FB477;
+    --nu-green-soft: #E8F5EE;
+    --nu-gold: #C9A227;
+    --nu-text: #1f2d2a;
+    --nu-muted: #6c7a76;
+    --nu-bg: #f3f6f4;
+    --sidebar-w: 250px;
+}
+
+html, body {
+    font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+    color: var(--nu-text);
+    background: var(--nu-bg);
+}
+
+/* ---- Layout ---- */
+.admin-shell { display: flex; min-height: 100vh; }
+.admin-sidebar {
+    width: var(--sidebar-w); background: var(--nu-green-dark); color: #d8eddf;
+    position: fixed; top: 0; left: 0; height: 100vh; overflow-y: auto;
+    transition: transform .25s ease; z-index: 1040;
+}
+.admin-sidebar .brand {
+    padding: 1.2rem 1.4rem; border-bottom: 1px solid rgba(255,255,255,.1);
+    display: flex; align-items: center; gap: .7rem;
+}
+.admin-sidebar .brand img { width: 40px; height: 40px; }
+.admin-sidebar .brand .title { font-weight: 700; color: #fff; line-height: 1.2; }
+.admin-sidebar .brand .subtitle { font-size: .75rem; opacity: .8; }
+.admin-sidebar .nav { padding: 1rem 0; }
+.admin-sidebar .nav-link {
+    color: #d8eddf; padding: .65rem 1.4rem; display: flex; align-items: center; gap: .7rem;
+    font-weight: 500; border-left: 3px solid transparent;
+}
+.admin-sidebar .nav-link i { width: 1.4rem; text-align: center; }
+.admin-sidebar .nav-link:hover { background: rgba(255,255,255,.08); color: #fff; }
+.admin-sidebar .nav-link.active {
+    background: rgba(255,255,255,.12); color: #fff; border-left-color: var(--nu-gold);
+}
+.admin-sidebar .nav-section {
+    text-transform: uppercase; font-size: .72rem; letter-spacing: .08em; padding: 1rem 1.4rem .3rem;
+    color: rgba(255,255,255,.55);
+}
+
+.admin-main {
+    flex: 1; margin-left: var(--sidebar-w); display: flex; flex-direction: column; min-height: 100vh;
+}
+.admin-topbar {
+    background: #fff; padding: .8rem 1.4rem; box-shadow: 0 2px 6px rgba(0,0,0,.04);
+    display: flex; align-items: center; justify-content: space-between;
+}
+.admin-topbar .toggle-btn {
+    background: transparent; border: 1px solid #ddd; border-radius: 6px;
+    width: 38px; height: 38px; display: none; align-items: center; justify-content: center;
+}
+.admin-topbar .user-block { display: flex; align-items: center; gap: .6rem; font-weight: 500; }
+.admin-topbar .user-block .avatar {
+    width: 36px; height: 36px; border-radius: 50%; background: var(--nu-green-soft);
+    display: inline-flex; align-items: center; justify-content: center; color: var(--nu-green-dark);
+    font-weight: 700;
+}
+.admin-content { flex: 1; padding: 1.6rem; }
+.admin-footer {
+    background: #fff; border-top: 1px solid #eee; padding: .9rem 1.4rem;
+    font-size: .85rem; color: var(--nu-muted); text-align: center;
+}
+
+/* ---- Stat cards ---- */
+.stat-card { border: none; border-radius: 14px; box-shadow: 0 4px 14px rgba(10,92,54,.07); }
+.stat-card .icon {
+    width: 56px; height: 56px; border-radius: 14px;
+    display: inline-flex; align-items: center; justify-content: center; font-size: 1.4rem;
+}
+.bg-soft-green { background: var(--nu-green-soft); color: var(--nu-green-dark); }
+.bg-soft-gold { background: #FAF1D2; color: var(--nu-gold); }
+.bg-soft-blue { background: #DBEEFB; color: #1e88e5; }
+.bg-soft-red { background: #FBDDDB; color: #c0392b; }
+
+/* ---- Tables ---- */
+.card-table {
+    border: none; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 14px rgba(10,92,54,.06);
+}
+.card-table .card-header {
+    background: #fff; border-bottom: 1px solid #eef2ef; font-weight: 600; color: var(--nu-green-dark);
+}
+.table-pnu thead th {
+    background: var(--nu-green-soft); color: var(--nu-green-dark); font-weight: 600;
+    border: 0;
+}
+
+/* ---- Buttons ---- */
+.btn-primary-pnu {
+    background: var(--nu-green-dark); color: #fff; border: none; font-weight: 600;
+}
+.btn-primary-pnu:hover { background: var(--nu-green); color: #fff; }
+
+/* ---- Login page ---- */
+.login-wrap {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--nu-green-dark), var(--nu-green)) center/cover no-repeat;
+    padding: 2rem;
+}
+.login-card {
+    background: #fff; border-radius: 18px; padding: 2.4rem 2rem; max-width: 420px; width: 100%;
+    box-shadow: 0 20px 50px rgba(0,0,0,.18);
+}
+.login-card .brand { text-align: center; margin-bottom: 1.2rem; }
+.login-card .brand img { width: 64px; }
+.login-card .brand h4 { color: var(--nu-green-dark); font-weight: 700; margin-top: .6rem; }
+.login-card .brand small { color: var(--nu-muted); }
+
+/* ---- Responsive ---- */
+@media (max-width: 992px) {
+    .admin-sidebar { transform: translateX(-100%); }
+    .admin-sidebar.show { transform: translateX(0); }
+    .admin-main { margin-left: 0; }
+    .admin-topbar .toggle-btn { display: inline-flex; }
+}

@@ -1,0 +1,214 @@
+/* ============================================================
+   PNU Kanang CMS - Frontend Stylesheet
+   Tema warna Nahdlatul Ulama (hijau tua, hijau muda, putih, emas)
+   ============================================================ */
+
+:root {
+    --nu-green-dark: #0a5c36;
+    --nu-green: #137C45;
+    --nu-green-light: #4FB477;
+    --nu-green-soft: #E8F5EE;
+    --nu-gold: #C9A227;
+    --nu-gold-soft: #F8EFC9;
+    --nu-white: #ffffff;
+    --nu-text: #1f2d2a;
+    --nu-muted: #6c7a76;
+    --nu-bg: #f7faf8;
+}
+
+html, body {
+    font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+    color: var(--nu-text);
+    background: var(--nu-bg);
+    scroll-behavior: smooth;
+}
+
+a { color: var(--nu-green); }
+a:hover { color: var(--nu-green-dark); }
+
+/* ---- Top bar ---- */
+.topbar {
+    background: var(--nu-green-dark);
+    color: #e8f5ee;
+    font-size: .85rem;
+    padding: .45rem 0;
+}
+.topbar a { color: #e8f5ee; text-decoration: none; }
+.topbar a:hover { color: var(--nu-gold-soft); }
+
+/* ---- Navbar ---- */
+.navbar-pnu {
+    background: var(--nu-white);
+    box-shadow: 0 2px 12px rgba(10, 92, 54, .08);
+}
+.navbar-pnu .navbar-brand { font-weight: 700; color: var(--nu-green-dark); }
+.navbar-pnu .navbar-brand img { height: 44px; margin-right: .6rem; }
+.navbar-pnu .nav-link { font-weight: 500; color: var(--nu-text); padding: .6rem 1rem !important; }
+.navbar-pnu .nav-link:hover, .navbar-pnu .nav-link.active { color: var(--nu-green-dark); }
+.navbar-pnu .btn-daftar {
+    background: var(--nu-gold);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: .45rem 1.2rem;
+    border: none;
+}
+.navbar-pnu .btn-daftar:hover { background: #ad8718; color: #fff; }
+
+/* ---- Hero ---- */
+.hero {
+    background:
+        linear-gradient(rgba(10, 92, 54, .82), rgba(10, 92, 54, .88)),
+        url('/img/hero-bg.svg') center/cover no-repeat,
+        var(--nu-green-dark);
+    color: #fff;
+    padding: 5.5rem 0 5rem;
+    position: relative;
+    overflow: hidden;
+}
+.hero h1 { font-size: clamp(1.8rem, 3.2vw, 3rem); font-weight: 700; line-height: 1.2; }
+.hero .lead { font-size: 1.1rem; opacity: .95; max-width: 720px; }
+.hero .btn-hero {
+    background: var(--nu-gold);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: .65rem 1.6rem;
+}
+.hero .btn-hero:hover { background: #ad8718; color: #fff; }
+.hero .btn-outline-hero {
+    border: 2px solid #fff; color: #fff; background: transparent; border-radius: 30px;
+    padding: .55rem 1.6rem; font-weight: 600;
+}
+.hero .btn-outline-hero:hover { background: #fff; color: var(--nu-green-dark); }
+.hero .arabesque {
+    position: absolute; right: -120px; top: -120px; width: 460px; opacity: .12;
+}
+
+/* ---- Section ---- */
+.section { padding: 4.5rem 0; }
+.section-title {
+    font-weight: 700; color: var(--nu-green-dark); margin-bottom: 1rem; position: relative;
+}
+.section-subtitle { color: var(--nu-muted); margin-bottom: 2.5rem; }
+.section-title.text-center::after {
+    content: ""; display: block; margin: .9rem auto 0; width: 60px; height: 3px;
+    background: var(--nu-gold); border-radius: 3px;
+}
+
+/* ---- Cards ---- */
+.card-program {
+    border: none; border-radius: 18px; box-shadow: 0 6px 24px rgba(10, 92, 54, .08);
+    transition: all .25s ease; height: 100%;
+}
+.card-program:hover { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(10, 92, 54, .15); }
+.card-program .icon-wrap {
+    width: 64px; height: 64px; border-radius: 16px;
+    background: var(--nu-green-soft); color: var(--nu-green-dark);
+    display: inline-flex; align-items: center; justify-content: center; font-size: 1.8rem;
+}
+.card-program h5 { color: var(--nu-green-dark); font-weight: 600; }
+
+.card-news {
+    border: none; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 4px 20px rgba(10, 92, 54, .08); transition: all .25s ease; height: 100%;
+}
+.card-news:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(10, 92, 54, .12); }
+.card-news .card-img-top {
+    aspect-ratio: 16/10; object-fit: cover; background: var(--nu-green-soft);
+}
+.card-news .card-title a { color: var(--nu-text); text-decoration: none; font-weight: 600; }
+.card-news .card-title a:hover { color: var(--nu-green); }
+.card-news .badge-cat {
+    background: var(--nu-green-soft); color: var(--nu-green-dark); font-weight: 600; border-radius: 20px;
+}
+
+/* ---- Stats ---- */
+.stats-block { background: var(--nu-green-dark); color: #fff; border-radius: 22px; padding: 3rem 1.2rem; }
+.stat-item .num { font-size: 2.4rem; font-weight: 700; color: var(--nu-gold); }
+.stat-item .label { opacity: .9; font-weight: 500; }
+
+/* ---- Sambutan ---- */
+.sambutan {
+    background: var(--nu-green-soft); border-radius: 22px;
+    padding: 2.2rem; border-left: 6px solid var(--nu-gold);
+}
+.sambutan blockquote {
+    font-style: italic; color: var(--nu-text); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;
+}
+
+/* ---- CTA Pendaftaran ---- */
+.cta-daftar {
+    background: linear-gradient(135deg, var(--nu-green-dark), var(--nu-green));
+    color: #fff; border-radius: 22px; padding: 3rem 2rem;
+    box-shadow: 0 12px 30px rgba(10, 92, 54, .25);
+}
+.cta-daftar .btn {
+    background: var(--nu-gold); border: none; color: #fff; font-weight: 600; border-radius: 30px;
+    padding: .7rem 1.8rem;
+}
+.cta-daftar .btn:hover { background: #ad8718; color: #fff; }
+
+/* ---- Gallery ---- */
+.gallery-item { overflow: hidden; border-radius: 14px; position: relative; cursor: pointer; }
+.gallery-item img { width: 100%; aspect-ratio: 1/1; object-fit: cover; transition: transform .35s ease; }
+.gallery-item:hover img { transform: scale(1.07); }
+.gallery-item .overlay {
+    position: absolute; inset: 0; background: linear-gradient(transparent, rgba(10, 92, 54, .85));
+    display: flex; align-items: flex-end; padding: 1rem; color: #fff; opacity: 0; transition: opacity .25s ease;
+}
+.gallery-item:hover .overlay { opacity: 1; }
+.gallery-item .overlay .title { font-weight: 600; }
+
+/* ---- Forms ---- */
+.form-control:focus, .form-select:focus {
+    border-color: var(--nu-green-light);
+    box-shadow: 0 0 0 .2rem rgba(79, 180, 119, .25);
+}
+.btn-primary-pnu {
+    background: var(--nu-green-dark); border: none; color: #fff; font-weight: 600;
+    border-radius: 8px; padding: .6rem 1.4rem;
+}
+.btn-primary-pnu:hover { background: var(--nu-green); color: #fff; }
+
+/* ---- Footer ---- */
+.footer-pnu {
+    background: var(--nu-green-dark); color: #d8eddf; padding: 3.5rem 0 1.5rem; margin-top: 4rem;
+}
+.footer-pnu h6 { color: #fff; font-weight: 600; margin-bottom: 1rem; }
+.footer-pnu a { color: #d8eddf; text-decoration: none; }
+.footer-pnu a:hover { color: var(--nu-gold-soft); }
+.footer-pnu .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, .12); margin-top: 2rem; padding-top: 1.2rem;
+    text-align: center; font-size: .9rem;
+}
+
+/* ---- Page header ---- */
+.page-header {
+    background: linear-gradient(135deg, var(--nu-green-dark), var(--nu-green));
+    color: #fff; padding: 3.5rem 0 2.5rem;
+}
+.page-header h1 { font-weight: 700; margin: 0; }
+.page-header .breadcrumb {
+    background: transparent; padding: 0; margin-top: .6rem;
+}
+.page-header .breadcrumb a { color: #fff; text-decoration: none; }
+.page-header .breadcrumb-item.active { color: var(--nu-gold-soft); }
+.page-header .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,.6); }
+
+/* ---- Article content ---- */
+.prose { line-height: 1.85; font-size: 1.04rem; }
+.prose h2, .prose h3 { color: var(--nu-green-dark); font-weight: 700; margin-top: 1.6rem; }
+.prose img { max-width: 100%; border-radius: 10px; }
+.prose ul li { margin-bottom: .35rem; }
+
+/* ---- Badge status ---- */
+.badge-status-baru { background: #c9a227; }
+.badge-status-diproses { background: #1e88e5; }
+.badge-status-diterima { background: #137C45; }
+.badge-status-ditolak { background: #c0392b; }
+
+/* ---- Pagination ---- */
+.page-link { color: var(--nu-green-dark); }
+.page-item.active .page-link { background: var(--nu-green-dark); border-color: var(--nu-green-dark); }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#137C45"/>
+      <stop offset="100%" stop-color="#0a5c36"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <g fill="#C9A227" opacity="0.85">
+    <circle cx="400" cy="220" r="68"/>
+    <polygon points="400,168 414,210 458,210 422,236 436,278 400,253 364,278 378,236 342,210 386,210"/>
+  </g>
+  <text x="400" y="360" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="28" font-weight="700">PONDOK PESANTREN</text>
+  <text x="400" y="395" text-anchor="middle" fill="#F8EFC9" font-family="Georgia,serif" font-size="22">NAHDLATUL UMMAH KANANG</text>
+</svg>
